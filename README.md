@@ -72,6 +72,16 @@
 + 如果需要上https
     + 需要更换自己的ssl证书和秘钥
     + node修改为https启动
++ 服务器安装docker
++ 项目放服务器
++ 进入项目根目录
++ `docker-compose up -d`启动所有容器
++ 等个几分钟，因为next容器会打包并启动服务端渲染
++ 然后进入8000端口，如果没问题应该就看到首页啦
++ 如果报错了
+    + 那就`docker-compose down`删除刚刚启动的所有容器
+    + 然后`docker images`查看镜像，`docker rmi  xxxxx`删除对应的镜像`taoland-react_next`和`taoland-react_node`
+    + `docker-compose up`启动所有容器，并查看内部启动过程找出错误原因
 #### 注意
 + 如果是win系统，修改`docker-compose.yml`
     + 屏蔽` volumes: - ./volumes/mongodb/data/db:/data/db`,否则mongodb起不起来
