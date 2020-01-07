@@ -1,0 +1,12 @@
+/node_modules/**
+/node/node_modules/**
+
+/dev/**
+/node/**
+/plop/**
+/public/**
+
+/dist/**
+/out/**
+/.next/**
+

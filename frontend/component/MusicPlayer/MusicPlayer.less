@@ -1,0 +1,31 @@
+// @import "../../public/css/constans.less";
+@MAIN: #0ff; //primary-color
+@MAIN2: #f0f; //primary-color
+@SUCCESS: #66bb6a;
+@FAIL: #f44336;
+
+
+// :global{
+//     .xxx{ white-space: nowrap; }
+// }
+
+.playerBox {
+  position: relative;
+  .playIcon,
+  .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .playIcon {
+    transform: scale(0.8);
+  }
+  .progress {
+    color: @FAIL;
+  }
+  .progress {
+    &.play {
+      color: @SUCCESS;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+import { ACTION_TYPE_{{moduleName}} } from './action'
+import { IReducerAction } from '@/interface/app';
+
+interface IHomeReducer {
+    a: number
+}
+interface IArticleList {
+    b: number
+}
+
+const initState: IHomeReducer = {
+    a: 1,
+}
+const {{moduleName}} = (state = initState, action: IReducerAction) => {
+    const types = {
+        [ACTION_TYPE_{{moduleName}}.GET_ARTICLE_LIST]: getArticleList
+    }
+
+    const { type, payload } = action;
+    return types[type] ? types[type](state, payload) : state;
+}
+
+const getArticleList = (
+    state: IHomeReducer,
+    payload: IArticleList
+) => {
+    let { a } = state;
+    let { b } = payload;
+
+    return {
+        ...state,
+        a: a + b
+    }
+}
+
+
+export default {{moduleName}}

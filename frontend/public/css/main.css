@@ -1,0 +1,178 @@
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 6px !important;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 6px !important;
+  background: #ffffff !important;
+  cursor: pointer !important;
+}
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 5px !important;
+  -webkit-box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5) !important;
+  background: rgba(63, 98, 131, 0.8) !important;
+  cursor: pointer !important;
+}
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5) !important;
+  border-radius: 0 !important;
+  background: rgba(240, 240, 240, 0.5) !important;
+  cursor: pointer !important;
+}
+a {
+  color: #1890ff;
+}
+ul {
+  padding: 0 0 0 40px;
+}
+
+
+
+.bd-box {
+  position: relative;
+}
+.bd-handle:hover .bd-t {
+  animation: bd-t-cycle 1.5s ease-out 0s infinite;
+}
+.bd-handle:hover .bd-r {
+  animation: bd-r-cycle 1.5s ease-out 0s infinite;
+}
+.bd-handle:hover .bd-b {
+  animation: bd-b-cycle 1.5s ease-out 0s infinite;
+}
+.bd-handle:hover .bd-l {
+  animation: bd-l-cycle 1.5s ease-out 0s infinite;
+}
+.bd-t {
+  width: 0;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+.bd-r {
+  width: 4px;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+}
+.bd-b {
+  width: 0;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+}
+.bd-l {
+  width: 4px;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+.light .bd-t,.light .bd-r,.light .bd-b,.light .bd-l{
+  background-color: #3f51b5;
+}
+@keyframes bd-t-cycle {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes bd-r-cycle {
+  0% {
+    height: 100%;
+    top: 0;
+  }
+  54% {
+    height: 0;
+    top: 100%;
+  }
+  55% {
+    height: 0;
+    top: 0;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+@keyframes bd-b-cycle {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  55% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+@keyframes bd-l-cycle {
+  0% {
+    height: 100%;
+    bottom: 0;
+  }
+  54% {
+    height: 0;
+    bottom: 100%;
+  }
+  55% {
+    height: 0;
+    bottom: 0;
+  }
+  100% {
+    height: 100%;
+    bottom: 0;
+  }
+}
+
+#WELCOME {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Microsoft YaHei;
+}
+#WELCOME p {
+}
+#WELCOME h1 {
+  font-size: 120px;
+}
+.mainPage {
+  min-height: calc(100vh - 177px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+}
+@media (max-width: 900px) {
+  #WELCOME h1 {
+    font-size: 40px;
+  }
+}

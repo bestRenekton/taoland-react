@@ -1,0 +1,21 @@
+import { request } from '@/util/index'
+
+
+export const GetArticleDetail = async (data: { id: string }, node?: boolean) => {
+    return request({
+        node: node ? node : false,
+        url: 'api/articleDetail/',
+        method: 'get',
+        data,
+    })
+}
+
+
+export const GetArticleList = (data: { page: number, row: number }, node?: boolean) => {
+    return request({
+        node: node ? node : false,
+        url: 'api/articleList',
+        method: 'post',
+        data,
+    })
+}

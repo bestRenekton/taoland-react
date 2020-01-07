@@ -1,0 +1,21 @@
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
+npm-debug.log*
+/.vscode
+
+
+# frontend
+/frontend/.next
+
+#node
+/node/logs
+/node/api-dist
+/node/upload
+/node/ssl
+
+
+# data
+/volumes

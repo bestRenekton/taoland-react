@@ -1,0 +1,20 @@
+import { take, call, put, fork, select, takeLatest, takeEvery } from 'redux-saga/effects';
+import { ACTION_TYPE_{{moduleName}}, getArticleList } from './action';
+import { GetArticleList } from './server'
+
+
+function* getArticleList_saga(params) {
+    try {
+        // const {{moduleName}}: IHomeReducer = yield select(state => state.{{moduleName}});
+
+        const json = yield call(GetArticleList, params.payload);
+        yield put(getArticleList(json))
+    } catch (error) {
+        yield put(getArticleList({ page: 1, row: 1 }))
+    }
+}
+
+
+export default [
+    takeEvery(ACTION_TYPE_{{moduleName}}.GET_ARTICLE_LIST, getArticleList_saga)
+];

@@ -1,0 +1,91 @@
+.login {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  .bgp {
+    width: 100%;
+    animation: coverZoom 50s linear 0s infinite;
+  }
+  .loginBox {
+    width: 400px;
+    height: 260px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    margin: -130px 0 0 -200px;
+    text-align: center;
+    .loginGithub,
+    .loginAdmin {
+      display: inline-block;
+      width: 0px;
+      height: 0px;
+      border-width: 50px 50px 50px 50px;
+      border-style: solid;
+      cursor: pointer;
+      transition: all 1s;
+      // box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f,
+      //   inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+      // // box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff;
+    }
+    .loginGithub {
+      border-color: transparent #fff #fff transparent;
+      margin-right: 20px;
+      &.light{
+        border-color: transparent #000 #000 transparent;
+      }
+      &.on,
+      &:hover {
+        border-color: transparent #f0f #f0f transparent;
+      }
+    }
+    .loginAdmin {
+      border-color: #fff transparent transparent #fff;
+      &.light{
+        border-color: #000 transparent transparent #000;
+      }
+      &.on,
+      &:hover {
+        border-color: #0ff transparent transparent #0ff;
+      }
+    }
+    .loading {
+      margin: 10px 0 0 0;
+    }
+    .loginInfo {
+      margin: 20px 0 0 0;
+      .loginGithubBtn {
+        display: block;
+        margin-top: 20px;
+      }
+      .loginAdminBtn {
+        display: block;
+        margin: 10px auto 0;
+      }
+      .inputContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > div {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes coverZoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.24);
+  }
+}

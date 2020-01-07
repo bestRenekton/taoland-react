@@ -1,0 +1,72 @@
+// @import 'public/css/constans.less';
+@MAIN: #0ff; //primary-color
+@MAIN2: #f0f; //primary-color
+@SUCCESS: #66bb6a;
+@FAIL: #f44336;
+
+
+
+.adminHome {
+  .TabPanel {
+    padding: 20px;
+    .btnsRow {
+      margin: 20px;
+      button {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+.editModal {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  background: #000;
+  border: 2px solid #fff;
+  padding: 20px;
+  overflow-y: auto;
+  &.light{
+    background: #eee;
+  }
+}
+.delModal {
+  .content {
+    min-width: 400px;
+  }
+}
+.categoryModal {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  background: #000;
+  border: 2px solid #fff;
+  padding: 20px;
+  overflow-y: auto;
+  &.light{
+    background: #eee;
+  }
+  .category {
+    list-style-type: none;
+    padding: 10px;
+    > li {
+      background: @MAIN;
+      display: inline-block;
+      margin: 0 10px 10px 0;
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+  }
+  .inputRow {
+    display: flex;
+    align-items: center;
+    .input {
+      flex: 1;
+      margin-right: 30px;
+    }
+  }
+}

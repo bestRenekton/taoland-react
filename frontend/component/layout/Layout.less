@@ -1,0 +1,121 @@
+.header {
+  .logo {
+    height     : 100%;
+    display    : flex;
+    align-items: center;
+    cursor     : pointer;
+  }
+
+  .nav {
+    display    : flex;
+    align-items: center;
+
+    li {
+      display      : inline-block;
+      line-height  : 38px;
+      margin-right : 10px;
+      border-bottom: 2px solid transparent;
+      cursor       : pointer;
+
+      &:hover {
+        border-bottom: 2px solid #fff;
+      }
+
+      .txt {
+        padding: 10px;
+      }
+
+      &.currentNav {
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+
+  .LoginBtn {
+    margin-left: 60px;
+    display    : flex;
+    align-items: center;
+
+    .avatar {
+      cursor: pointer;
+    }
+  }
+
+}
+
+.footer {
+  padding: 20px 0;
+
+  .info {
+    text-align: center;
+
+    p {
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+    }
+
+    a {
+      margin-left: 10px;
+    }
+  }
+
+  .music {
+    width     : 40px;
+    height    : 40px;
+    position  : fixed;
+    left      : 24px;
+    bottom    : 50px;
+    cursor    : pointer;
+    opacity   : 0.8;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  .header {
+    // .logo {
+    //   height     : 100%;
+    //   display    : flex;
+    //   align-items: center;
+    //   cursor     : pointer;
+    // }
+
+    // .nav {
+    //   display    : flex;
+    //   align-items: center;
+
+    //   li {
+    //     display      : inline-block;
+    //     line-height  : 38px;
+    //     margin-right : 10px;
+    //     border-bottom: 2px solid transparent;
+    //     cursor       : pointer;
+
+    //     &:hover {
+    //       border-bottom: 2px solid #fff;
+    //     }
+
+    //     .txt {
+    //       padding: 10px;
+    //     }
+
+    //     &.currentNav {
+    //       border-bottom: 2px solid #fff;
+    //     }
+    //   }
+    // }
+
+    .LoginBtn {
+      margin: 0 10px 0 0;
+
+    }
+
+  }
+}

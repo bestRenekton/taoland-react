@@ -1,0 +1,14 @@
+// import { Ixxxx } from "@/interface/{{moduleName}}"
+
+export enum ACTION_TYPE_{{moduleName}} {
+    GET_ARTICLE_LIST = '{{moduleName}}/GET_ARTICLE_LIST',
+}
+
+
+
+export const getArticleList = (data: { page: number, row: number }) => ({
+    type: ACTION_TYPE_{{moduleName}}.GET_ARTICLE_LIST,
+    payload: data
+})
+
+

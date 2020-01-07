@@ -1,0 +1,60 @@
+version: "3"
+services:
+  next:
+    build:
+      context: ./
+      dockerfile: Dockerfile-next
+    container_name: taoland-next
+    depends_on:
+      - node
+    restart: always
+    ports:
+      - 7999:7999
+    networks:
+      - taoland
+
+  nginx-pagespeed:
+    image: pagespeed/nginx-pagespeed
+    container_name: taoland-nginx
+    depends_on:
+      - next
+    restart: always
+    ports:
+      - 8000:8000
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/taoland.conf:/etc/nginx/vhost/taoland.conf
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 8002:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root1
+      MONGO_INITDB_ROOT_PASSWORD: root2
+    volumes:
+      - ./volumes/mongodb/data/db:/data/db
+    networks:
+      - taoland
+
+  node:
+    build:
+      context: ./
+      dockerfile: Dockerfile-node
+    container_name: taoland-node
+    depends_on:
+      - mongo
+    restart: always
+    ports:
+      - 8003:8003
+    volumes:
+      - ./volumes/logs:/node/logs
+      - ./volumes/upload:/node/upload
+      - ./ssl:/node/ssl
+    networks:
+      - taoland
+
+networks:
+  taoland:
+    driver: bridge

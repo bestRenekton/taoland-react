@@ -1,0 +1,21 @@
+//@import 'public/css/constans.scss';
+
+// :global{
+//     .xxx{ white-space: nowrap; }
+// }
+
+.toTop {
+  position: fixed;
+  z-index: 1;
+  right: 24px;
+  bottom: 50px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s;
+  &.on {
+    opacity: 0.8;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}

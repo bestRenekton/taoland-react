@@ -1,0 +1,42 @@
+//@import 'public/css/constans.scss';
+
+// :global{
+//     .xxx{ white-space: nowrap; }
+// }
+
+//article-card
+.cardArticle {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 60px;
+  .l {
+    flex: 3;
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+    > img {
+      width: 100%;
+    }
+  }
+  .r {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.cardArticleLoading {
+  margin-bottom: 60px;
+}
+@media (max-width: 900px) {
+  .cardArticle {
+    .l {
+      display: none;
+    }
+  }
+  .cardArticleLoading {
+    .lg {
+      display: none;
+    }
+  }
+}

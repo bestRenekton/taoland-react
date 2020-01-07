@@ -1,0 +1,13 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env", //有了它，2015、2016、2017，全都支持,另外 babel7 stage也废除了
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ],
+        "@babel/preset-typescript" //支持typescript
+    ]
+}

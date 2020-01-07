@@ -1,0 +1,244 @@
+// @import "../../public/css/constans.less";
+@MAIN: #0ff; //primary-color
+@MAIN2: #f0f; //primary-color
+@SUCCESS: #66bb6a;
+@FAIL: #f44336;
+
+
+// :global{
+//     .xxx{ white-space: nowrap; }
+// }
+
+.comment {
+  margin: 0 0 100px 0;
+  .commentBtn {
+    margin: 100px auto 80px;
+    width: 400px;
+    font-size: 60px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s;
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+  .commentBody {
+    .commentRow {
+      display: flex;
+      padding: 40px 0;
+      .commentRow_l {
+        width: 200px;
+        text-align: center;
+        .avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+        }
+        .name {
+          .admin {
+            margin-left: 4px;
+            .admin_l,
+            .admin_r {
+              display: inline-block;
+              width: 0px;
+              height: 0px;
+              border-width: 5px 5px 5px 5px;
+              border-style: solid;
+              cursor: pointer;
+              transition: all 1s;
+            }
+            .admin_l {
+              margin-right: 2px;
+              border-color: transparent @MAIN2 @MAIN2 transparent;
+            }
+            .admin_r {
+              border-color: @MAIN transparent transparent @MAIN;
+            }
+          }
+        }
+      }
+      .commentRow_r {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        .mainComment {
+          position: relative;
+          margin-top: 20px;
+          .content {
+            margin-bottom: 30px;
+            word-break: break-all;
+          }
+          .date {
+            position: absolute;
+            right: 50px;
+            bottom: 0;
+            opacity: 0.5;
+          }
+          .replyBtn {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            color: @MAIN;
+            opacity: 0.5;
+            cursor: pointer;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+        .mainReply {
+          margin-top: 40px;
+          .replyRow {
+            display: flex;
+            padding: 20px 0;
+            .replyRow_l {
+              width: 50px;
+              .replyRow_avatar {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+              }
+            }
+            .replyRow_r {
+              flex: 1;
+              margin-top: 6px;
+              position: relative;
+              .replyRow_content {
+                margin-bottom: 30px;
+                width: 76%;
+                word-break: break-all;
+                .admin {
+                  margin-left: 4px;
+                  .admin_l,
+                  .admin_r {
+                    display: inline-block;
+                    width: 0px;
+                    height: 0px;
+                    border-width: 5px 5px 5px 5px;
+                    border-style: solid;
+                    cursor: pointer;
+                    transition: all 1s;
+                  }
+                  .admin_l {
+                    margin-right: 2px;
+                    border-color: transparent @MAIN2 @MAIN2 transparent;
+                  }
+                  .admin_r {
+                    border-color: @MAIN transparent transparent @MAIN;
+                  }
+                }
+                .txt {
+                  opacity: 0.7;
+                }
+              }
+              .replyRow_date {
+                position: absolute;
+                right: 50px;
+                bottom: 0;
+                opacity: 0.5;
+              }
+              .replyRow_replyBtn {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                color: @MAIN;
+                opacity: 0.5;
+                cursor: pointer;
+                &:hover {
+                  opacity: 0.7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.commentModal {
+  overflow: hidden;
+  .content {
+    width: 500px;
+    textarea {
+      width: 100%;
+      min-height: 200px;
+    }
+  }
+}
+.commentLoading {
+}
+
+
+
+
+
+@media (max-width: 900px) {
+  .comment {
+    margin: 0 0 20px 0;
+    .commentBtn {
+      margin: 30px auto;
+      width: 80%;
+      font-size: 30px;
+    }
+    .commentBody {
+      .commentRow {
+        padding: 10px 0;
+        .commentRow_l {
+          width: 80px;
+          overflow: hidden;
+          .avatar {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .commentRow_r {
+          margin-left: 20px;
+          .mainComment {
+            margin-top: 10px;
+            font-size: 14px;
+          }
+          .mainReply {
+            margin-top: 20px;
+            .replyRow {
+              padding: 10px 0;
+              .replyRow_l {
+                width: 40px;
+                .replyRow_avatar {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+              .replyRow_r {
+                margin-top: 0;
+                .replyRow_content {
+                  margin-bottom: 30px;
+                  width: 100%;
+                  font-size: 12px;
+                  .txt {
+                    opacity: 0.7;
+                  }
+                }
+                .replyRow_date {
+                  font-size: 12px;
+                }
+                .replyRow_replyBtn {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .commentModal {
+    .content {
+      width: 300px;
+    }
+  }
+  .commentLoading {
+  }
+}
