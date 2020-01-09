@@ -13,6 +13,7 @@ import { useInitHeight } from '@/hooks';
 import styles from './articleDetail.less';
 import { ROUTERLEVEL, THEME, BASE } from '@/constans';
 import { deviceJudge } from '@/util';
+import { Typography } from '@material-ui/core';
 
 
 interface IArticleDetail {
@@ -25,7 +26,7 @@ const ArticleDetail: NextPage = (props: IArticleDetail) => {
     const { pageProgressStart, pageProgressEnd, userInfo, theme } = app;
     const { level } = userInfo;
     const { json } = props;
-    const { _id, title, category, gist, date, content, next, prev, comments, looked } = json;
+    const { _id, title, category, gist, date, content, next, prev, previewImg, looked } = json;
     // console.log(props.json);
     const router = useRouter();
     const SEOHeadProps = {
@@ -67,6 +68,12 @@ const ArticleDetail: NextPage = (props: IArticleDetail) => {
                     </p>
                 </div>
                 <div className={`${styles.body} ${theme === THEME.light ? styles.light : ''}`}>
+                    <img
+                        className={styles.previewImg}
+                        src={`${BASE}${previewImg}`}
+                        onError={(e: any) => { e.target.onerror = null; e.target.src = '/img/errImg.png'; }}
+                    />
+                    <Typography className={styles.gist} variant="h6">{gist}</Typography>
                     <ReactMarkdown
                         source={content}
                         renderers={{

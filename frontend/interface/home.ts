@@ -30,6 +30,7 @@ export interface IArticleDetailItem {
     comments: number,
     looked: number,
     content: string,
+    previewImg: string,
     date: string,
     gist: string,
     title: string,
