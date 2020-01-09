@@ -193,10 +193,10 @@ export const FormAdmin: React.SFC<IFormAdmin> = memo((props) => {
                     />
                 </FormControl>
 
-                <FormControl fullWidth className={`${styles.item}`}>
+                {/* <FormControl fullWidth className={`${styles.item}`}>
                     <InputLabel>上传图片</InputLabel>
                     <Upload changeFun={(val) => addImg(val, 'article')} width={70} height={70} infoTxt="上传图片" />
-                </FormControl>
+                </FormControl> */}
 
                 <FormControl fullWidth className={`${styles.item} ${styles.content}`}>
                     <Grid container spacing={4}>
@@ -219,7 +219,14 @@ export const FormAdmin: React.SFC<IFormAdmin> = memo((props) => {
                         </Grid>
                     </Grid>
                 </FormControl>
-                <div style={{ textAlign: 'center', marginTop: 20 }}>
+                <div className={styles.footer}>
+                    <Upload
+                        changeFun={(val) => addImg(val, 'article')}
+                        type={"noInfo"}
+                        width={40}
+                        height={40}
+                        style={{ margin: '0 20px 0 0 ' }}
+                    />
                     <Button onClick={submit} variant="contained">提交</Button>
                 </div>
             </form>

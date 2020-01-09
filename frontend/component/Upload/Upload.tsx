@@ -59,10 +59,10 @@ const compress = (img) => {
 // 将base64转换为file
 export const dataURLtoFile = (dataurl, name) => {
     let arr = dataurl.split(',');
-        let mime = arr[0].match(/:(.*?);/)[1];
-        let bstr = atob(arr[1]);
-        let n = bstr.length;
-        let u8arr = new Uint8Array(n);
+    let mime = arr[0].match(/:(.*?);/)[1];
+    let bstr = atob(arr[1]);
+    let n = bstr.length;
+    let u8arr = new Uint8Array(n);
     while (n--) {
         u8arr[n] = bstr.charCodeAt(n);
     }
@@ -73,6 +73,7 @@ export const dataURLtoFile = (dataurl, name) => {
 // 各类型默认信息
 const types = {
     default: { bgp: '', infoTxt: '上传预览图' },
+    noInfo: { bgp: '', infoTxt: '' },
     // 'id1': { bgp: img_IDfront, infoTxt: '上传正面(照片面)' },
     // 'id2': { bgp: img_IDback, infoTxt: '上传背面(国徽面)' },
     // 'house1': { bgp: img_house1, infoTxt: '拍摄房产证影像' },
@@ -96,6 +97,7 @@ interface IUpload {
     type?: string,
     width?: number, // 长
     height?: number, // 宽
+    style?: any,//样式
     bgp?: string, // 背景图
     infoTxt?: string, // 文字信息
     value?: string, // 反显的图片值
@@ -108,6 +110,7 @@ export const Upload: React.SFC<IUpload> = React.memo(({
     type = 'default',
     width = 200,
     height = 200,
+    style,
     bgp = types[type].bgp,
     infoTxt = types[type].infoTxt,
     value,
@@ -151,13 +154,13 @@ export const Upload: React.SFC<IUpload> = React.memo(({
         };
     };
     return (
-        <div className={styles.upload} style={{ width, height }}>
+        <div className={styles.upload} style={{ width, height, ...style }}>
             <input
-              type="file"
-              accept="image/*"
-              {...cameraOnly ? { capture: 'camera' } : {}}
-              onChange={handleChange}
-              className={styles.upload_input}
+                type="file"
+                accept="image/*"
+                {...cameraOnly ? { capture: 'camera' } : {}}
+                onChange={handleChange}
+                className={styles.upload_input}
             />
             <div className={styles.upload_info}>
                 {/* <img src={img_camareIcon} className={styles.uploadInfo_camare} alt="照相机图标" /> */}
