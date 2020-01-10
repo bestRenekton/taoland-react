@@ -1,4 +1,4 @@
-import { DB_ACCOUNT, DB_PASSWORD, DB_URL } from "../constans";
+import { DB_ACCOUNT, DB_PASSWORD, DB_URL } from "../constant";
 
 const mongoose = require('mongoose');
 // mongoose.connect('mongodb://root1:root2@localhost:8002', { useNewUrlParser: true, useUnifiedTopology: true });

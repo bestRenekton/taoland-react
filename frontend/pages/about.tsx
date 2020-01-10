@@ -10,7 +10,7 @@ import { useInitHeight } from '@/hooks';
 import { IAppReducer } from '@/interface/app';
 import { RootState } from '@/model/rootReducer';
 import { CommentLoadable } from '@/component';
-import { ROUTERLEVEL } from '@/constans';
+import { ROUTERLEVEL } from '@/constant';
 
 
 

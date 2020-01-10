@@ -15,7 +15,7 @@ import { RootState } from '@/model/rootReducer';
 import { ListPagination, FormAdmin, TableAdmin } from '@/component';
 import { CheckToken, GetCategory, CreateCategory, DelArticle } from '@/model/admin/server';
 import { changeUserInfo } from '@/model/app/action';
-import { DEFAULTUSERINFO, THEME } from '@/constans';
+import { DEFAULTUSERINFO, THEME } from '@/constant';
 import { IAppReducer } from '@/interface/app';
 
 

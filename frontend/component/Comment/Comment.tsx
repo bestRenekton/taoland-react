@@ -9,7 +9,7 @@ import styles from './Comment.less';
 import { CreateComment, GetComment, ReplyComment } from '@/model/articleDetail/server';
 import { useInputValue, useFetchBack } from '@/hooks';
 import { Icomments } from '@/interface/home';
-import { ROUTERLEVEL } from '@/constans';
+import { ROUTERLEVEL } from '@/constant';
 import { ListPagination } from '..';
 import admin from '@/model/admin/reducer';
 

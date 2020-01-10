@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-unfetch';
 import qs from 'qs';
-import { CODE_MESSAGE, BASE_URL } from '@/constans';
+import { CODE_MESSAGE, BASE_URL } from '@/constant';
 import { IRequestOpt } from '@/interface/app';
 
 

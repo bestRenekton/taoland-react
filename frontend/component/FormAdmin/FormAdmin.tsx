@@ -7,7 +7,7 @@ import styles from './FormAdmin.less';
 import { useInputValue, useFetchBack } from '@/hooks';
 import { EditorComponent, Upload } from '@/component';
 import { GetArticleDetail, CreateArticle, UpdateArticle, AddImg } from '@/model/admin/server';
-import { BASE } from '@/constans';
+import { BASE } from '@/constant';
 
 
 interface IFormAdmin {

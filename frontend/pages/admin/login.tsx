@@ -9,7 +9,7 @@ import { GitHub } from '@material-ui/icons';
 import { TextField, Button, CircularProgress } from '@material-ui/core';
 import { useSnackbar } from 'notistack';
 import { useInputValue, useFetchBack } from '@/hooks';
-import { GITHUB_OAUTH_URL } from '@/constans';
+import { GITHUB_OAUTH_URL } from '@/constant';
 import styles from './login.less';
 import { SignIn } from '@/model/login/server';
 import { changeUserInfo } from '@/model/app/action';

@@ -1,5 +1,5 @@
 const Router = require('koa-router');
-import { API_PREFIX } from '../constans';
+import { API_PREFIX } from '../constant';
 import { oauth, signIn, checkToken, visitCount } from './sign'
 import {
     createArticle, getArticleList, getArticleDetail, delArticle, updateArticle,

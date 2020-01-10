@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { GitHub } from '@material-ui/icons';
 
-import { ROUTER_TABLE, THEME, DEVICE } from '@/constans';
+import { ROUTER_TABLE, THEME, DEVICE } from '@/constant';
 import { MusicPlayer } from '../MusicPlayer/MusicPlayer';
 import styles from './Layout.less';
 import { VisitCount } from '@/model/home/server';

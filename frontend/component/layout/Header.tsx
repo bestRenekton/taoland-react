@@ -7,7 +7,7 @@ import { Menu, Brightness4, Brightness7 } from '@material-ui/icons';
 import localforage from 'localforage';
 
 
-import { ROUTER_TABLE, DEFAULTSEO, ROUTERLEVEL, DEFAULTUSERINFO, THEME } from '@/constans';
+import { ROUTER_TABLE, DEFAULTSEO, ROUTERLEVEL, DEFAULTUSERINFO, THEME } from '@/constant';
 import { SEOHead, ToTop, PageProgress } from '@/component';
 import styles from './Layout.less';
 import { RootState } from '@/model/rootReducer';

@@ -1,4 +1,4 @@
-import { VALID_ORIGINS } from "../constans";
+import { VALID_ORIGINS } from "../constant";
 
 /**
  * 关键点：

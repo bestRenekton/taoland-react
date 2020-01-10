@@ -2,7 +2,7 @@ import axios from 'axios';
 // import { message } from 'antd';
 import qs from 'qs';
 import localforage from 'localforage';
-import { CODE_MESSAGE, BASE_URL } from '@/constans';
+import { CODE_MESSAGE, BASE_URL } from '@/constant';
 import { IRequestOpt } from '@/interface/app';
 
 

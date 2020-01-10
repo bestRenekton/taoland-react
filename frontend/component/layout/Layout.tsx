@@ -3,7 +3,7 @@ import { Container, ThemeProvider, CssBaseline } from '@material-ui/core';
 import { SnackbarProvider } from 'notistack';
 import { Header, Footer, ErrorBoundary } from '@/component';
 import { createtheme } from '@/util';
-import { THEMECONFIG } from '@/constans';
+import { THEMECONFIG } from '@/constant';
 import { IAppReducer } from '@/interface/app';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/model/rootReducer';

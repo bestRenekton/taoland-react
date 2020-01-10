@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { clientID, clientSecret, TOKENKEY, ROUTERLEVEL, BASE } from '../constans'
+import { clientID, clientSecret, TOKENKEY, ROUTERLEVEL, BASE } from '../constant'
 import { ReData, isAdminFun, commonTryCatch } from '../utils/common'
 const jwt = require("jsonwebtoken");
 const db = require('../utils/db');

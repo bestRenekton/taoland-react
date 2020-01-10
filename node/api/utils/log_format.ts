@@ -1,5 +1,5 @@
 const log4js = require('log4js');
-import { LOG_CONFIG } from '../constans/index'//加载配置文件
+import { LOG_CONFIG } from '../constant'//加载配置文件
 
 
 let errorLogger = log4js.getLogger('error');

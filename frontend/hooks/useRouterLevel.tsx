@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 
-import { ROUTER_TABLE } from '@/constans';
+import { ROUTER_TABLE } from '@/constant';
 import { RootState } from '@/model/rootReducer';
 import { IAppReducer } from '@/interface/app';
 

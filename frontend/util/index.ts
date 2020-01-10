@@ -1,4 +1,4 @@
-import { ISPRODUCTION } from '@/constans';
+import { ISPRODUCTION } from '@/constant';
 
 
 

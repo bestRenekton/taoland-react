@@ -4,7 +4,7 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import { RemoveRedEye, Message } from '@material-ui/icons';
 import styles from './Card.less';
 import { IArticleItem } from '@/interface/home';
-import { BASE, THEME } from '@/constans';
+import { BASE, THEME } from '@/constant';
 
 
 interface ICard {

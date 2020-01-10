@@ -1,5 +1,5 @@
 import { changeDevice } from '@/model/app/action';
-import { DEVICE } from '@/constans';
+import { DEVICE } from '@/constant';
 
 function BrowserType(userAgent) {
     // 权重：系统 + 系统版本 > 平台 > 内核 + 载体 + 内核版本 + 载体版本 > 外壳 + 外壳版本

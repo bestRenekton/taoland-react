@@ -11,7 +11,7 @@ import { IAppReducer } from '@/interface/app';
 import { RootState } from '@/model/rootReducer';
 import { useInitHeight } from '@/hooks';
 import styles from './articleDetail.less';
-import { ROUTERLEVEL, THEME, BASE } from '@/constans';
+import { ROUTERLEVEL, THEME, BASE } from '@/constant';
 import { deviceJudge } from '@/util';
 import { Typography } from '@material-ui/core';
 

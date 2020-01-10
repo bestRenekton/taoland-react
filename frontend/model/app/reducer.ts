@@ -1,4 +1,4 @@
-import { DEVICE, DEFAULTUSERINFO, THEME } from '@/constans';
+import { DEVICE, DEFAULTUSERINFO, THEME } from '@/constant';
 import { IAppReducer } from '@/interface/app';
 
 const initState: IAppReducer = {

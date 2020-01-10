@@ -1,4 +1,4 @@
-import { TOKENKEY, ROUTERLEVEL, PATHFOLDER } from "../constans";
+import { TOKENKEY, ROUTERLEVEL, PATHFOLDER } from "../constant";
 const db = require('../utils/db');
 
 const jwt = require("jsonwebtoken");
