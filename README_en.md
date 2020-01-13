@@ -41,7 +41,7 @@ Main technologies used:
 + Back end uses node,Koa for frame
 + Mongodb is adopted for database
 + PWA offline settings configured,Use with HTTPS
-+ Using docker for deployment
++ Using docker and webhooks for automatic deployment
 
 
 ## 🚀 Start
@@ -102,10 +102,13 @@ npm run dev
 + `docker-compose up -d`Start all containers
 + Wait a few minutes, because the next container will package and start the server-side rendering
 + Then go to port 8000. If there is no problem, you should see the home page
-+ If wrong
-    + `docker-compose down`Delete all containers that just started
-    + `docker images`View the image,`docker rmi  xxxxx`Delete the corresponding image`taoland-react_next`和`taoland-react_node`
-    + `docker-compose up`Start all containers and check the internal startup process to find out the cause of the error
+##### If wrong
++ `docker-compose down`Delete all containers that just started
++ `docker images`View the image,`docker rmi  xxxxx`Delete the corresponding image`taoland-react_next`和`taoland-react_node`
++ `docker-compose up`Start all containers and check the internal startup process to find out the cause of the error
+##### webhooks
++ Project root ` NPM run docker webhooks`
++ Enter your own GitHub warehouse, setting > webhook, add a listening rule, and you can deploy it automatically every time you push
 </details> 
 
 ##  💼 Formation
@@ -118,6 +121,7 @@ npm run dev
 + nginx===Configuration of nginx
 + node===Backend code
 + ssl===HTTPS certificate
++ webhooks===Automated deployment settings
 + docker-compose.yml===Docker configuration
 + Dockerfile-next===Front end next container
 + Dockerfile-node===Backend node container
