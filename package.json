@@ -15,6 +15,7 @@
     "start:server": "cd node && node api-dist/index.js",
     "docker-next-start": "next build && next start -p 7999",
     "docker-node-start": "babel api --extensions '.ts' --out-dir api-dist && node api-dist/index.js",
+    "docker-webhooks": "cd webhooks && npm i node-github-webhook && pm2 start webhook.js",
     "export": "cnpm i && npm-run-all --parallel export:*",
     "export:client": "del html && cd frontend && del .next && next build && next export -o ../html",
     "export:server": "cd node && del api-dist && babel api --extensions '.ts' --out-dir api-dist",

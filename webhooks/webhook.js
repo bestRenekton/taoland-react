@@ -29,6 +29,9 @@ handler.on('push', function (event) {
         event.payload.repository.name,
         event.payload.ref
     )
+    if (event.payload.ref !== 'refs/heads/master') {//只部署master的提交
+        return
+    }
     switch (event.path) {
         case '/deploy-taoland':
             runCmd('sh', ['./deploy-taoland.sh', event.payload.repository.name], function (text) { console.log(text) })

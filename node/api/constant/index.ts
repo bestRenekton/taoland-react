@@ -1,10 +1,10 @@
 //host
-export const BASE = "http://localhost:7999";
-// export const BASE = "http://137.48.1.1:8000";
+// export const BASE = "http://localhost:7999";
+export const BASE = "http://49.235.78.129:8000";
 
 //数据库
-export const DB_URL = "localhost:8002";
-// export const DB_URL = "137.48.1.1:8002";
+// export const DB_URL = "localhost:8002";
+export const DB_URL = "49.235.78.129:8002";
 export const DB_ACCOUNT = "root1";
 export const DB_PASSWORD = "root2";
 
@@ -14,8 +14,8 @@ export const VALID_ORIGINS = [
     'http://localhost:8000',
     'https://localhost:7999',
     'https://localhost:8000',
-    'http://137.48.1.1:7999',
-    'http://137.48.1.1:8000',
+    'http://49.235.78.129:7999',
+    'http://49.235.78.129:8000',
 ]
 
 //github三方登录
