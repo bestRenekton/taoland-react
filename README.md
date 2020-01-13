@@ -40,7 +40,7 @@
 + 后端使用Node,框架用的Koa
 + 数据库采用MongoDB
 + 配置了PWA离线设置,使用需配合https
-+ 使用Docker来进行部署
++ 使用Docker，webhooks来进行自动部署
 
 
 ## 🚀 快速开始
@@ -101,10 +101,13 @@ npm run dev
 + `docker-compose up -d`启动所有容器
 + 等个几分钟，因为next容器会打包并启动服务端渲染
 + 然后进入8000端口，如果没问题应该就看到首页啦
-+ 如果报错了
-    + 那就`docker-compose down`删除刚刚启动的所有容器
-    + 然后`docker images`查看镜像，`docker rmi  xxxxx`删除对应的镜像`taoland-react_next`和`taoland-react_node`
-    + `docker-compose up`启动所有容器，并查看内部启动过程找出错误原因
+##### 如果报错了
++ 那就`docker-compose down`删除刚刚启动的所有容器
++ 然后`docker images`查看镜像，`docker rmi  xxxxx`删除对应的镜像`taoland-react_next`和`taoland-react_node`
++ `docker-compose up`启动所有容器，并查看内部启动过程找出错误原因
+##### 使用webhooks监听仓库提交，自动部署
++ 项目根目录`npm run docker-webhooks`
++ 进入自己github仓库,setting > webhook,新增一个监听规则，以后每次push就可以自动部署了
 </details> 
 
 ##  目录结构

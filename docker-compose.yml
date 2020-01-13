@@ -4,18 +4,16 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile-next
-    container_name: taoland-next
+    container_name: taoland-react-next
     depends_on:
       - node
     restart: always
     ports:
       - 7999:7999
-    networks:
-      - taoland
 
   nginx-pagespeed:
     image: pagespeed/nginx-pagespeed
-    container_name: taoland-nginx
+    container_name: taoland-react-nginx
     depends_on:
       - next
     restart: always
@@ -35,14 +33,12 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: root2
     volumes:
       - ./volumes/mongodb/data/db:/data/db
-    networks:
-      - taoland
 
   node:
     build:
       context: ./
       dockerfile: Dockerfile-node
-    container_name: taoland-node
+    container_name: taoland-react-node
     depends_on:
       - mongo
     restart: always
@@ -52,9 +48,3 @@ services:
       - ./volumes/logs:/node/logs
       - ./volumes/upload:/node/upload
       - ./ssl:/node/ssl
-    networks:
-      - taoland
-
-networks:
-  taoland:
-    driver: bridge
