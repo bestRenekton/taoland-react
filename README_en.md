@@ -31,6 +31,9 @@ Implemented functions：
 - [x] Picture upload
 - [x] Label classification
 - [x] Comment function
+- [x] Server Side Render
+- [x] PWA
+- [x] Automated Deployment
 
 ## ⚙️ Technology
 

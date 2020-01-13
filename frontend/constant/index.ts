@@ -4,8 +4,8 @@ import { IROUTER_TABLE } from '@/interface/app';
 //是否是生产环境，用于屏蔽console
 export const ISPRODUCTION = false;
 //根地址
-// export const BASE = "http://localhost:8003/";
-export const BASE = 'http://49.235.78.129:8003/';
+export const BASE = "http://localhost:8003/";
+// export const BASE = 'http://137.48.1.1:8003/';
 
 
 //请求地址
