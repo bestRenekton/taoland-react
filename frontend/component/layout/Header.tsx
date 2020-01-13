@@ -170,7 +170,7 @@ export const Header: React.SFC = memo((props) => {
                                     <Grid container>
                                         <Grid item md={1} xs={6}>
                                             <div onClick={goHome} className={styles.logo}>
-                                                <Typography variant="h6">TaoLand222</Typography>
+                                                <Typography variant="h6">TaoLand</Typography>
                                             </div>
                                         </Grid>
                                         <Grid item container md={11} xs={6} justify="flex-end">
