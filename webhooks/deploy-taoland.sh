@@ -11,4 +11,5 @@ git reset --hard origin/master
 # 更新docker
 docker-compose stop
 docker-compose up -d --build
+docker image prune -f
 echo "done"
