@@ -6,6 +6,13 @@
   <br><strong>taoland-react</strong> a blog powered by TypeScript,React,Koa.
 </p>
 
+[![react](https://img.shields.io/badge/react-v16.12.0-0074D9)](https://reactjs.org/)
+[![redux](https://img.shields.io/badge/redux-v4.0.5-7FDBFF)](https://redux.js.org/)
+[![redux-saga](https://img.shields.io/badge/redux--saga-v1.1.3-2ECC40)](https://redux-saga.js.org/)
+[![material-ui](https://img.shields.io/badge/%40material--ui-v4.8.2-FF851B)](https://github.com/mui-org/material-ui)
+[![next](https://img.shields.io/badge/next-v9.1.6-FF4136)](https://nextjs.org/)
+[![koa](https://img.shields.io/badge/koa-v2.11.0-B10DC9)](https://koajs.com/)
+[![typescript](https://img.shields.io/badge/typescript-v3.7.4-85144B)](https://www.typescriptlang.org/)
 [![David](https://img.shields.io/david/bestRenekton/taoland-react.svg)](https://david-dm.org/bestRenekton/taoland-react)
 [![DevDependencies](https://img.shields.io/david/dev/bestRenekton/taoland-react.svg)](https://david-dm.org/bestRenekton/taoland-react?type=dev)
 [![License](https://img.shields.io/npm/l/@loadable/component.svg)](https://github.com/bestRenekton/taoland-react/blob/master/LICENSE)
@@ -120,16 +127,18 @@ npm run dev
   <summary>Expand / collapse</summary> 
   <br/>
 
-+ frontend=== Front-end code
-+ nginx===Configuration of nginx
-+ node===Backend code
-+ ssl===HTTPS certificate
-+ webhooks===Automated deployment settings
-+ docker-compose.yml===Docker configuration
-+ Dockerfile-next===Front end next container
-+ Dockerfile-node===Backend node container
-+ volumes===Data storage after docker is used will automatically synchronize back-end logs, database data, uploaded pictures, etc
-+ html=== Generally not used. If you use next to export statically, you can put it here
+```shell
+     ┌── frontend            Front-end code
+     ├── nginx               Configuration of nginx
+     ├── node                Backend code
+     ├── ssl                 HTTPS certificate
+src──├── webhooks            Automated deployment settings
+     ├── docker-compose.yml  Docker configuration
+     ├── Dockerfile-next     Front end next container
+     ├── Dockerfile-node     Backend node container
+     ├── volumes             Data storage after docker is used will automatically synchronize back-end logs, database data, uploaded pictures, etc
+     └── html                Generally not used. If you use next to export statically, you can put it here
+```
 </details> 
 
 ##  🎓 Detailed command

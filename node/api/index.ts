@@ -24,7 +24,7 @@ const app = new Koa();
 
 
 //静态资源
-app.use(KoaStatic(path.join(__dirname, '../upload')))
+app.use(KoaStatic(path.join(__dirname, '../upload'), { maxAge: 365 * 24 * 60 * 60 }))
 // 日志
 app.use(logger);
 //跨域

@@ -6,6 +6,13 @@
   <br><strong>taoland-react</strong> 一个使用TypeScript,React,Koa构建的博客。
 </p>
 
+[![react](https://img.shields.io/badge/react-v16.12.0-0074D9)](https://reactjs.org/)
+[![redux](https://img.shields.io/badge/redux-v4.0.5-7FDBFF)](https://redux.js.org/)
+[![redux-saga](https://img.shields.io/badge/redux--saga-v1.1.3-2ECC40)](https://redux-saga.js.org/)
+[![material-ui](https://img.shields.io/badge/%40material--ui-v4.8.2-FF851B)](https://github.com/mui-org/material-ui)
+[![next](https://img.shields.io/badge/next-v9.1.6-FF4136)](https://nextjs.org/)
+[![koa](https://img.shields.io/badge/koa-v2.11.0-B10DC9)](https://koajs.com/)
+[![typescript](https://img.shields.io/badge/typescript-v3.7.4-85144B)](https://www.typescriptlang.org/)
 [![David](https://img.shields.io/david/bestRenekton/taoland-react.svg)](https://david-dm.org/bestRenekton/taoland-react)
 [![DevDependencies](https://img.shields.io/david/dev/bestRenekton/taoland-react.svg)](https://david-dm.org/bestRenekton/taoland-react?type=dev)
 [![License](https://img.shields.io/npm/l/@loadable/component.svg)](https://github.com/bestRenekton/taoland-react/blob/master/LICENSE)
@@ -119,16 +126,18 @@ npm run dev
   <summary>展开/收起</summary> 
   <br/>
 
-+ frontend=== 前端代码
-+ nginx===nginx的配置
-+ node===后端代码
-+ ssl===https证书
-+ webhooks===自动化部署设置
-+ docker-compose.yml===docker配置
-+ Dockerfile-next===前端next容器
-+ Dockerfile-node===后端node容器
-+ volumes===使用docker后的数据存放，里面会自动同步后端的日志，数据库数据，上传图片等
-+ html=== 一般未使用，如果使用next静态导出export后，可以放于此处
+```shell
+     ┌── frontend            前端代码
+     ├── nginx               nginx的配置
+     ├── node                后端代码
+     ├── ssl                 https证书
+src──├── webhooks            自动化部署设置
+     ├── docker-compose.yml  docker配置
+     ├── Dockerfile-next     前端next容器
+     ├── Dockerfile-node     后端node容器
+     ├── volumes             使用docker后的数据存放，里面会自动同步后端的日志，数据库数据，上传图片等
+     └── html                一般未使用，如果使用next静态导出export后，可以放于此处
+```
 </details> 
 
 ##  命令详解

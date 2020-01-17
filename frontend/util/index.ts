@@ -14,7 +14,7 @@ export { createtheme } from './theme';
 
 //存活时间
 export const getSurvivalTime = () => {
-    let s = new Date('2018-02-06 14:01:23').getTime() / 1000;
+    let s = new Date('2018/02/06 14:01:23').getTime() / 1000;
     let e = new Date().getTime() / 1000;
     let stamp = e - s;
 
