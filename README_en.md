@@ -5,6 +5,7 @@
   <br>English | <a href="README.md">中文</a>
   <br><strong>taoland-react</strong> a blog powered by TypeScript,React,Koa.
 </p>
+<div align="center">
 
 [![react](https://img.shields.io/badge/react-v16.12.0-0074D9)](https://reactjs.org/)
 [![redux](https://img.shields.io/badge/redux-v4.0.5-7FDBFF)](https://redux.js.org/)
@@ -16,6 +17,8 @@
 [![David](https://img.shields.io/david/bestRenekton/taoland-react.svg)](https://david-dm.org/bestRenekton/taoland-react)
 [![DevDependencies](https://img.shields.io/david/dev/bestRenekton/taoland-react.svg)](https://david-dm.org/bestRenekton/taoland-react?type=dev)
 [![License](https://img.shields.io/npm/l/@loadable/component.svg)](https://github.com/bestRenekton/taoland-react/blob/master/LICENSE)
+
+</div>
 
 ## Introduction
 

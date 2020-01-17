@@ -4,7 +4,9 @@
   <img src="https://raw.githubusercontent.com/bestRenekton/taoland-react/master/frontend/public/img/taoland.png"/>
   <br>中文 | <a href="README_en.md">English</a>
   <br><strong>taoland-react</strong> 一个使用TypeScript,React,Koa构建的博客。
- 
+</p>
+<div align="center">
+
 [![react](https://img.shields.io/badge/react-v16.12.0-0074D9)](https://reactjs.org/)
 [![redux](https://img.shields.io/badge/redux-v4.0.5-7FDBFF)](https://redux.js.org/)
 [![redux-saga](https://img.shields.io/badge/redux--saga-v1.1.3-2ECC40)](https://redux-saga.js.org/)
@@ -15,8 +17,8 @@
 [![David](https://img.shields.io/david/bestRenekton/taoland-react.svg)](https://david-dm.org/bestRenekton/taoland-react)
 [![DevDependencies](https://img.shields.io/david/dev/bestRenekton/taoland-react.svg)](https://david-dm.org/bestRenekton/taoland-react?type=dev)
 [![License](https://img.shields.io/npm/l/@loadable/component.svg)](https://github.com/bestRenekton/taoland-react/blob/master/LICENSE)
-</p>
 
+</div>
 
 
 ## 简介
